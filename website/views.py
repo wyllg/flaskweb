@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 
 views = Blueprint('views', __name__)
 
@@ -13,3 +13,10 @@ def about():
 @views.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@views.route('/contactlist', methods=["POST"])
+def contactlist():
+    first_name = request.form.get("first_name")
+    last_name = request.form.get("last_name")
+    email = request.form.get("email")
+    return render_template('contactlist.html', first_name=first_name, last_name=last_name, email=email)

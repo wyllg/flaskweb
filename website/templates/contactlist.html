@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Thank You for Subscribing!</h1>
+        <p>We have received your subscription request. Here's the info you provided:</p>
+        <p><strong>Name:</strong> {{ first_name }} {{ last_name }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+    </div>
+{% endblock %}

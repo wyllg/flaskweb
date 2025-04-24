@@ -1,22 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home | Cloud</title>
-    </head>
-
-    <body>
-        <h1>Homepage</h1>
-        <p>Welcome the Homepage.</p>
-        <div>
-            <!-- <button href="/about">About</button> -->
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+    <div class="container">
+        <h1>Welcome to the Homepage</h1>
+        <p>Welcome to the website. A Python website powered by Flask</p>
+        <div class="mt-4">
+            <a href="/about" class="btn btn-outline-primary mr-3">About</a>
+            <a href="/contact" class="btn btn-outline-primary">Contact</a>
         </div>
-    </body>
-</html>
-
+    </div>
 {% endblock %}
